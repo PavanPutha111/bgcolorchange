@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Change background color</title>
+    <style rel='stylesheet'>
+        #clickme {
+            color: blueviolet;
+            float: right;
+            margin-top: 250px;
+            margin-right: 420px;
+            width: 100px;
+            height: 75px;
+        }
+#clickme:hover{
+background-color:green;
+}
+    </style>
+</head>
+
+<body>
+
+    <button id="clickme" onclick="changebgcolor()">change background color</button>
+    <script>
+        const button = document.querySelector('#clickme');
+        const body = document.querySelector('body');
+        const colors = ['pink', 'green', 'blue', 'red', 'orange'];
+        body.style.backgroundColor = 'yellow';
+        document.getElementById('clickme').addEventListener('click', function() {
+            const colorIndex = parseInt(Math.random() * colors.length);
+            body.style.backgroundColor = colors[colorIndex];
+        })
+    </script>
+</body>
+
+</html>
